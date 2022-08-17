@@ -7,13 +7,17 @@
     font-size: 16px;
 }
 
+.page{
+    background: rgb(176, 133, 76);
+}
+
 h1{
     font-size: 24px;
 }
 
 .card-container{
     display:inline-block;
-    width:30%;
+    width: fit-content;
     margin:25px;
     padding: 20px;
     box-shadow:
@@ -35,9 +39,11 @@ h1{
 }
 
 .form-container{
+    display: flex;
+    justify-content: center;
     border: 1px solid #ccc;
-    width: 50%;
-    margin: 0 auto;
+    width: fit-content;
+    margin: 64px auto;
     padding: 30px;
     box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -49,8 +55,9 @@ h1{
 .form-field{
     font-weight: bold;
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
 .form-button{

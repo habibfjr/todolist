@@ -25,6 +25,7 @@ const Index =()=>{
     const deleteToDoHandler = (id) => {
         const updatedToDos = toDos.filter(toDo => toDo.id !== id)
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedToDos))
+        setToDos(updatedToDos)
     }
 
     const editToDoHandler = (id) => {
@@ -58,14 +59,14 @@ const Index =()=>{
     }, [setToDos])
 
     return (
-        <>
-        <h1>Welcome! <br /> Create Your To-Do List Here</h1> <br />
+        <div className="page">
+        <br /> <br /><h1>Welcome! <br /> Create Your To-Do List Here</h1> <br />
         <ToDoAdd setToDo={setToDo} toDo={toDo} handleSubmit={handleSubmit}/>
         <ToDoList
         deleteToDos={deleteToDoHandler}
         editToDos={editToDoHandler}
         toDos={toDos} />
-        </>
+        </div>
     )
 }
 
